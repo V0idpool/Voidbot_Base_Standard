@@ -1,0 +1,68 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+<PropertyGroup>
+<OutputType>WinExe</OutputType>
+<TargetFramework>net8.0-windows</TargetFramework>
+<RootNamespace>Voidbot_Discord_Bot_GUI</RootNamespace>
+<Nullable>enable</Nullable>
+<UseWindowsForms>true</UseWindowsForms>
+<ImplicitUsings>enable</ImplicitUsings>
+<ApplicationIcon>2451296.ico</ApplicationIcon>
+<AssemblyVersion>1.0.0</AssemblyVersion>
+<FileVersion>1.0.0</FileVersion>
+<Version>1.0.0</Version>
+<Title>VoidBot Discord Bot [GUI]</Title>
+<Description>Advanced desktop based Discord Bot, with full customization, control, must have / commands for your server, and full chat logs + more!</Description>
+<PackageIcon>2451296.png</PackageIcon>
+</PropertyGroup>
+
+<ItemGroup>
+<None Remove="Resources\2451296.png" />
+<None Remove="UserCFG.ini" />
+</ItemGroup>
+
+<ItemGroup>
+<Content Include="2451296.ico" />
+</ItemGroup>
+
+<ItemGroup>
+<EmbeddedResource Include="Resources\2451296.png" />
+<EmbeddedResource Include="UserCFG.ini">
+<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+</EmbeddedResource>
+</ItemGroup>
+
+<ItemGroup>
+  <None Include="..\..\..\Pictures\2451296.png">
+    <Pack>True</Pack>
+    <PackagePath>\</PackagePath>
+  </None>
+</ItemGroup>
+
+<ItemGroup>
+<PackageReference Include="Discord.Net" Version="3.16.0" />
+<PackageReference Include="Discord.Net.Core" Version="3.16.0" />
+<PackageReference Include="Discord.Net.Rest" Version="3.16.0" />
+<PackageReference Include="Discord.Net.WebSocket" Version="3.16.0" />
+<PackageReference Include="Google.Apis.YouTube.v3" Version="1.68.0.3556" />
+<PackageReference Include="HtmlAgilityPack" Version="1.11.67" />
+<PackageReference Include="MongoDB.Driver" Version="2.29.0" />
+<PackageReference Include="TwitchLib" Version="3.5.3" />
+</ItemGroup>
+
+<ItemGroup>
+<Compile Update="Properties\Resources.Designer.cs">
+<DesignTime>True</DesignTime>
+<AutoGen>True</AutoGen>
+<DependentUpon>Resources.resx</DependentUpon>
+</Compile>
+</ItemGroup>
+
+<ItemGroup>
+<EmbeddedResource Update="Properties\Resources.resx">
+<Generator>ResXFileCodeGenerator</Generator>
+<LastGenOutput>Resources.Designer.cs</LastGenOutput>
+</EmbeddedResource>
+</ItemGroup>
+
+</Project>
