@@ -2,7 +2,6 @@
 
 ![VoidBot](https://img.shields.io/badge/version-1.0.0-brightgreen)
 ![Release](https://img.shields.io/badge/Release-10%2F06%2F2024-blue)
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ---
 
