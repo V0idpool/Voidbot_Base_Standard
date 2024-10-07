@@ -12,7 +12,7 @@
 ---
 
 ## ⚙️ **Version**: 1.0.0 (Public Release)  
-## 👨‍💻 **Author**: Void Bot Development Team ([@voidpool1](https://github.com/voidpool1))  
+## 👨‍💻 **Author**: Void Bot Development Team ([@VoidPool](https://github.com/V0idpool))  
 ## 📅 **Release Date**: 10/06/2024  
 
 ---
