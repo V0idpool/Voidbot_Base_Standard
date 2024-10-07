@@ -12,11 +12,11 @@
 ---
 
 ## 📖 Description  
-VoidBot is a highly customizable Discord bot with features such as role management (🔇 **Mute system example**), XP tracking, user levels, moderation tools, and custom embeds. This release focuses on a user-friendly GUI with MongoDB integration for persistent data handling and server settings management.
+Void Bot is a highly customizable Discord bot with features such as role management ( Mute system Example ), XP tracking, user levels, moderation tools, and custom embeds. This release focuses on a GUI with MongoDB integration for user data and server settings management, making it easier to get started.
 
 ---
 
-## 🚀 Current Features
+## ⚙️ Current Features
 
 - 🛡️ **Verification System**: Includes an Autorole given upon successful verification in the verification & welcome channel.  
 - 🎭 **Role Management**: With features like a mute system example for moderation.  
@@ -39,20 +39,27 @@ VoidBot is a highly customizable Discord bot with features such as role manageme
 ## 📌 Notes  
 
 - 💻 **This public release** provides a core set of features for a C# Discord Bot with a GUI and background task handling.
-- ⚠️ **Setup Instructions**: Before using VoidBot, ensure you configure your settings. You’ll need:
-  - Your bot’s token.
-  - Your server ID.
-  - A YouTube API Key and API name (for `/yt` command example).
-  - Your MongoDB connection client URL (from your MongoDB account).
-  - Your MongoDB cluster name (this is just the name of your database).
-  
-  Once configured, use `/setup` to set:
-  - Verification & Welcome Channel.
-  - The rules channel.
-  - The role to automatically give users after successful verification.
+- ⚠️ **Setup Instructions**: 
 
-  Afterward, you’re ready to explore and customize further settings like XP cooldowns, gain amounts, and more.  
-  Check out [Discord.Net Docs](https://docs.discordnet.dev/) or code examples for additional customization.
+You need to configure the settings first. Here’s what you need
+
+- Your bot’s token.
+- Your server ID.
+- Youtube API Key and API name (For the /yt command example).
+- Your MongoDB connection client URL and the name of your MongoDB cluster.
+
+After that’s all set up, you can run the basic setup command using /setup to configure:
+  
+The Verification & Welcome Channel.
+The rules channel.
+The role to automatically give users after they successfully verify :check: .
+
+ This saves the settings to MongoDB to get you started. 
+ You can also check out the [Discord.Net Docs](https://docs.discordnet.dev/) or the code examples to customize other settings like XP cooldown value, XP gain amounts, etc.
+ You could also manually edit the mongoDB entries in your ServerSettings schema if you want.
+
+ Afterward, you’re ready to explore and customize further settings like XP cooldowns, gain amounts, and more.  
+ Check out [Discord.Net Docs](https://docs.discordnet.dev/) or code examples for additional customization.
 
 - ⚙️ **The settings file**: `UserCFG.ini` is saved in the same directory as the bot for easy access. Use it to manually edit your bot’s settings.
 
