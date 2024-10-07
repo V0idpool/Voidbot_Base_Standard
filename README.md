@@ -2,7 +2,7 @@
 
 ![VoidBot](https://img.shields.io/badge/version-1.0.0-brightgreen)
 ![Release](https://img.shields.io/badge/Release-10%2F06%2F2024-blue)
-
+https://raw.githubusercontent.com/V0idpool/Void_bot_DiscordBot_GUI/refs/heads/main/Void%20Bot%20Discord%20Bot%20Base%20(Standard)/vbotimage.png
 ---
 
 ## ⚙️ **Version**: 1.0.0 (Public Release)  
