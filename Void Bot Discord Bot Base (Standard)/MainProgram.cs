@@ -1353,15 +1353,29 @@ namespace Voidbot_Discord_Bot_GUI
                 _client.Connected += OnClientConnected;
                 _client.Disconnected += async (exception) =>
                 {
-                    Console.WriteLine($"[SYSTEM] VB Discord Bot disconnected...");
-                    if (shouldReconnect)
-                    {
-                        Console.WriteLine($"[SYSTEM] Attempting to establish a connection...");
-                        await Task.Delay(new Random().Next(30, 60) * 1000);
-                        Console.WriteLine($"[SYSTEM] Retrying connection...");
-                        await StartBotAsync();
-                    }
-                };
+                   Console.WriteLine($"[SYSTEM] VB Discord Bot disconnected: {exception?.Message}");
+                   // Call DisconnectBot to fully clear the session and reset
+                   await DisconnectBot();
+
+                      if (shouldReconnect)
+                      {
+                         for (int i = 1; i <= 5; i++)  // Retry max 5 times
+                           {
+                                try
+                               {
+                                   Console.WriteLine($"[SYSTEM] Attempting reconnect #{i}...");
+                                           await Task.Delay(TimeSpan.FromSeconds(new Random().Next(5, 30)));  // Exponential backoff
+                                           await StartBotAsync();
+             return;  // Exit on successful reconnect
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[SYSTEM] Reconnect attempt #{i} failed: {ex.Message}");
+            }
+        }
+        Console.WriteLine($"[SYSTEM] Failed to reconnect after 5 attempts. Stopping reconnections.");
+    }
+};
                 _interactionService = new InteractionService(_client);
                 await _client.LoginAsync(TokenType.Bot, DiscordBotToken);
                 Console.WriteLine("[SYSTEM] Attempting Login...]");
