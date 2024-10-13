@@ -1354,9 +1354,7 @@ namespace Voidbot_Discord_Bot_GUI
                 _client.Disconnected += async (exception) =>
                 {
                    Console.WriteLine($"[SYSTEM] VB Discord Bot disconnected: {exception?.Message}");
-                   // Call DisconnectBot to fully clear the session and reset
-                   await DisconnectBot();
-
+                  
                       if (shouldReconnect)
                       {
                          for (int i = 1; i <= 5; i++)  // Retry max 5 times
